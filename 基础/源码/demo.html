@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .box {
+            color:yellow;
+            background:green;
+            display:none;
+        }
+
+        div.show {
+            display:block;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+    {{message}}
+    <h2 @click="myshow()">{{title}}</h2>
+
+    <div class="box" :class="{show}" :style="{width,height}">
+        <ul>
+            <li v-for="item in articles.slice(0, 5)"  :title="item.content">{{item.title}}</li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--<script src="https://unpkg.com/vue@next"></script>-->
+<script src="./vue.global.js"></script>
+
+<script>
+   /* const app = new vue({
+        el:"#app",
+        data:{
+            message:'this is a test'
+        }
+    });*/
+
+    const app = Vue.createApp({
+        data() {
+            return {
+                show:true,
+                width:'300px',
+                height:'500px',
+                message:'this is a test',
+                title:"vue demo",
+                articles: [
+                    {title:'title111111', content:"content1111"},
+                    {title:'title111111', content:"content1112"},
+                    {title:'title111111', content:"content1113"},
+                    {title:'title111111', content:"content1114"},
+                    {title:'title111111', content:"content1115"},
+                    {title:'title111111', content:"content1116"},
+                    {title:'title111111', content:"content1111"},
+                    {title:'title111111', content:"content1111"},
+                    {title:'title111111', content:"content1111"},
+                ]
+            }
+        },
+        methods: {
+            myshow() {
+                this.show = !this.show;
+            }
+        }
+    }).mount("#app");
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
