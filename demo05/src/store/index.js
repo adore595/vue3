@@ -14,6 +14,15 @@ export default createStore({
         state.devnum+=count
       }
     },
-    actions: {},
+    getters:{
+        vxnum(state){
+            return state.num *state.num
+        }
+    },
+    actions: {
+        demo(context){
+            context.commit('sub')
+        }
+    },
     modules: {}
 })

@@ -44,7 +44,6 @@ const routes = [
             {
                 path: 'article',
                 component:()=>import('@/views/Myarticle')
-
             }
         ]
 

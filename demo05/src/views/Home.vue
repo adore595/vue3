@@ -7,6 +7,7 @@
         <hr>
         <h2>使用全局的状态</h2>
         <h2>{{$store.state.num}}</h2>
+        <h2>使用getter中的计算属性 平方:{{$store.getters.vxnum}}</h2>
         <button @click="$store.state.num--">-</button>
         <button @click="$store.state.num++">+</button>
         <hr>

@@ -1,11 +1,11 @@
 <template>
-    <h3>
-        <a href="/main">点击进入列表页</a>
-    </h3>
+    <h3><router-link to="/main">点击进入列表页</router-link></h3>
 </template>
 
 <script>
-
+export default {
+name: "Index"
+}
 </script>
 
 <style scoped>
